@@ -20,3 +20,6 @@ output/*
 *.log
 Thumbs.db
 .DS_Store
+build/
+dist/
+release/

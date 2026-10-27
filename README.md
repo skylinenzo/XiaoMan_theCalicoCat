@@ -4,6 +4,10 @@ Windows 11 上的 Python / PySide6 卡通三花猫桌宠。左右花纹独立，
 
 ## 启动
 
+免安装版：从 [Releases](https://github.com/skylinenzo/XiaoMan_theCalicoCat/releases) 下载 Windows x64 ZIP，完整解压后双击 `XiaoMan_theCalicoCat.exe`，无需安装 Python。保留旁边的 `_internal` 文件夹。
+
+从源码启动：
+
 1. 安装 Windows 版 Python 3.10 或更新版本（建议 3.12），包含 Python Launcher。
 2. 下载或克隆整个仓库，保留 `assets` 和 `output/imagegen` 目录。
 3. 双击 `start_cat.bat`，首次运行自动创建虚拟环境并安装依赖。
@@ -37,3 +41,12 @@ $env:QT_QPA_PLATFORM = "offscreen"
 ```
 
 `tools` 包含素材整理、预览和原生交互检查脚本；部分素材工具另需 Pillow。原始猫咪照片、虚拟环境、本机配置和预览输出不随仓库分发；程序使用的动画素材保留在 `output/imagegen`，眼睛标注位于 `assets`。
+
+在 Windows x64 上构建免安装 ZIP：
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-build.txt
+.\.venv\Scripts\python.exe tools/build_release.py
+```
+
+构建产物位于 `release/`，包含 ZIP 和 SHA-256 校验值。打包入口使用 PyInstaller 的相对资源路径机制保留素材目录结构（[官方说明](https://pyinstaller.org/en/stable/runtime-information.html)）。

@@ -1,0 +1,18 @@
+This portable package includes Python, PySide6, Shiboken6, Qt shared libraries,
+and the PyInstaller bootloader. Their licenses remain with their authors.
+Bundled license texts are in this directory; versions are in BUILD-INFO.txt.
+
+PySide6/Shiboken6 and Qt are used under their applicable open-source licenses,
+including LGPL v3. Libraries are dynamically loaded from _internal and may
+be replaced with compatible modified builds. This application imposes no
+restriction on reverse engineering for debugging modifications to these
+LGPL libraries.
+
+Upstream source repositories (select the tag matching BUILD-INFO.txt):
+PySide6/Shiboken6: https://code.qt.io/cgit/pyside/pyside-setup.git/
+Qt: https://code.qt.io/cgit/qt/ (qtbase, qtsvg and qtimageformats)
+Python: https://github.com/python/cpython
+PyInstaller: https://github.com/pyinstaller/pyinstaller
+
+Qt third-party notices: https://doc.qt.io/qt-6/licenses-used-in-qt.html
+PyInstaller's bootloader exception permits distribution of bundled applications.
