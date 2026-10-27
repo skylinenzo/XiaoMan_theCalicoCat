@@ -1,0 +1,99 @@
+{
+  "frames": [
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png",
+    "frame-05.png",
+    "frame-06.png",
+    "frame-07.png",
+    "frame-08.png"
+  ],
+  "playback_order_zero_based": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "duration_ms": [
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500
+  ],
+  "fps": 2,
+  "loop": true,
+  "frame_size": [
+    512,
+    512
+  ],
+  "labels": [
+    "A / contact",
+    "A / toe-off",
+    "A / passing",
+    "A / landing",
+    "B / contact",
+    "B / toe-off",
+    "B / passing",
+    "B / landing"
+  ],
+  "registration": {
+    "a-early": {
+      "scale_relative_to_512": 1.0033333333333332,
+      "offset": [
+        -2,
+        -1
+      ],
+      "head_error": 19.969806763285025
+    },
+    "a-middle": {
+      "scale_relative_to_512": 1.0,
+      "offset": [
+        -1,
+        1
+      ],
+      "head_error": 17.1324154589372
+    },
+    "a-late": {
+      "scale_relative_to_512": 1.0233333333333332,
+      "offset": [
+        -12,
+        -5
+      ],
+      "head_error": 38.51859903381643
+    },
+    "b-early": {
+      "scale_relative_to_512": 1.01,
+      "offset": [
+        -5,
+        -2
+      ],
+      "head_error": 24.163478260869564
+    },
+    "b-middle": {
+      "scale_relative_to_512": 1.01,
+      "offset": [
+        -5,
+        -2
+      ],
+      "head_error": 24.393816425120775
+    },
+    "b-late": {
+      "scale_relative_to_512": 1.0033333333333332,
+      "offset": [
+        -2,
+        -1
+      ],
+      "head_error": 20.09280193236715
+    }
+  },
+  "notes": "Two separately drawn diagonal half-steps. Approved A and B untouched. No reverse playback, crossfade, or app changes."
+}

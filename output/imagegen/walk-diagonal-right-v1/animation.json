@@ -1,0 +1,111 @@
+{
+  "frame_size": [
+    512,
+    512
+  ],
+  "foot_baseline_y": 490,
+  "frames": [
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png",
+    "frame-05.png",
+    "frame-06.png",
+    "frame-07.png",
+    "frame-08.png"
+  ],
+  "playback_order_zero_based": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "duration_ms": [
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500
+  ],
+  "direction": "right",
+  "loop": true,
+  "fps": 2,
+  "normalize_soles": false,
+  "blend_poses": false,
+  "step_pixels": [
+    1.9791304347826086,
+    96.97739130434782,
+    19.791304347826085,
+    19.791304347826085,
+    3.4634782608695653,
+    93.51391304347825,
+    41.06695652173913,
+    7.9165217391304346
+  ],
+  "support_anchors": [
+    [
+      443.5,
+      444.5
+    ],
+    [
+      444.5,
+      346.5
+    ],
+    [
+      346.5,
+      326.5
+    ],
+    [
+      326.5,
+      306.5
+    ],
+    [
+      440.5,
+      437.0
+    ],
+    [
+      437.0,
+      342.5
+    ],
+    [
+      342.5,
+      301.0
+    ],
+    [
+      301.0,
+      293.0
+    ]
+  ],
+  "lower_offsets": [
+    0.0,
+    -2.9791304347826086,
+    -1.9565217391304275,
+    -1.747826086956512,
+    -1.5391304347825967,
+    -1.502608695652162,
+    -0.5165217391304164,
+    -0.0834782608695459
+  ],
+  "support_paws": [
+    "near_front",
+    "near_front",
+    "near_front",
+    "near_front",
+    "far_front",
+    "far_front",
+    "far_front",
+    "far_front"
+  ],
+  "stride_pixels": 284.5,
+  "mirrored": false,
+  "artwork_source": "walk-diagonal-cycle-v2",
+  "prompt_source": "../walk-diagonal-cycle-v2/prompt-*.txt",
+  "body_motion": "steady"
+}

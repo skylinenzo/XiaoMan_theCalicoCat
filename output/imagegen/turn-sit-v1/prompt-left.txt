@@ -1,0 +1,4 @@
+Use case: precise-object-edit. Image1 is TWO frames of a cat turning and sitting. Make the LEFT-walking counterpart on a transparent two-column one-row sheet, same composition, sizes and artwork style. Image2 is only the left-facing coat reference.
+First cell: horizontally reflect the first cat's POSE so it turns from facing LEFT toward the viewer, hind knees bent and rump lowering. Replace fur patches with image2's asymmetric left-side coat: long orange shoulder bib, broad dark saddle, orange rear thigh, no large white oval on the flank. Preserve exact reflected silhouette, proportions, head size, lowered tail shape, joint bends.
+Second cell: keep the nearly front-facing seated cat from image1 unchanged in pose, proportions and face markings, since both directions lead to the same front-facing sitting pose.
+Two full-body drawings, identical pixel scale and baselines as image1, no labels/shadows/extra cats/grid. Actual transparent alpha.

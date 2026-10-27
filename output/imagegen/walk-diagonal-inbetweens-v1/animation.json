@@ -1,0 +1,60 @@
+{
+  "frames": [
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png",
+    "frame-05.png",
+    "frame-06.png"
+  ],
+  "frame_size": [
+    512,
+    512
+  ],
+  "labels": [
+    "original 1 / A",
+    "inserted lift",
+    "inserted forward swing",
+    "original 2 / B",
+    "original 3 / A",
+    "original 4 / B"
+  ],
+  "inserted_indices_zero_based": [
+    1,
+    2
+  ],
+  "preview_order_zero_based": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "preview_duration_ms": [
+    500,
+    500,
+    500,
+    500
+  ],
+  "loop": true,
+  "registration": {
+    "lift": {
+      "scale_relative_to_512": 1.01,
+      "offset": [
+        -5,
+        -2
+      ],
+      "head_error": 19.124202898550724
+    },
+    "swing": {
+      "scale_relative_to_512": 1.01,
+      "offset": [
+        -5,
+        -2
+      ],
+      "head_error": 23.55072463768116
+    }
+  },
+  "notes": "Only original frame 1 to frame 2 has new in-betweens. Other transitions remain unchanged. No app integration.",
+  "preview_target_fps": 2,
+  "preview_effective_fps": 2
+}

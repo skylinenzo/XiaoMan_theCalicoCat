@@ -1,0 +1,81 @@
+{
+  "frame_size": [
+    512,
+    512
+  ],
+  "foot_baseline_y": 480,
+  "contact_baseline_y": null,
+  "pivot_px": [
+    256,
+    270
+  ],
+  "ready_for_app": true,
+  "frames": [
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png"
+  ],
+  "playback_order_zero_based": [
+    0,
+    1,
+    2,
+    3,
+    2,
+    1,
+    0
+  ],
+  "duration_ms": [
+    1000,
+    600,
+    100,
+    140,
+    100,
+    600,
+    660
+  ],
+  "loop": true,
+  "mirrored": false,
+  "registration": {
+    "region": [
+      255,
+      25,
+      500,
+      140
+    ],
+    "offsets_and_errors_before_after": [
+      [
+        0,
+        0,
+        0.0,
+        0.0
+      ],
+      [
+        73,
+        1,
+        163.6484117125111,
+        34.72312333629104
+      ],
+      [
+        -2,
+        14,
+        111.33057675244011,
+        35.879929015084294
+      ],
+      [
+        72,
+        12,
+        173.06374445430345,
+        34.35403726708075
+      ]
+    ]
+  },
+  "scale": 0.7021276595744681,
+  "origin": [
+    -8.7021276595745,
+    53.80851063829789
+  ],
+  "source": "source-sheet.png",
+  "prompt": "prompt.txt",
+  "notes": "Original transparent drawings; shared uniform scale; ears/forehead registration; same first/last pose; shared GIF palette; no opacity dissolve or painted edits."
+}

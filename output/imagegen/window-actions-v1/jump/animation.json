@@ -1,0 +1,83 @@
+{
+  "frame_size": [
+    512,
+    512
+  ],
+  "ready_for_app": true,
+  "frames": [
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png"
+  ],
+  "playback_order_zero_based": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "duration_ms": [
+    280,
+    1000,
+    160,
+    260
+  ],
+  "loop": false,
+  "contact_baseline_y": 490,
+  "source": "source-sheet.png",
+  "prompt": "prompt.txt",
+  "scale": 0.76,
+  "registration": [
+    [
+      0,
+      0,
+      0.0,
+      0.0
+    ],
+    [
+      0,
+      0,
+      0.0,
+      0.0
+    ],
+    [
+      0,
+      0,
+      0.0,
+      0.0
+    ],
+    [
+      0,
+      0,
+      0.0,
+      0.0
+    ]
+  ],
+  "source_boxes": [
+    [
+      0,
+      0,
+      627,
+      680
+    ],
+    [
+      627,
+      0,
+      1254,
+      680
+    ],
+    [
+      0,
+      680,
+      627,
+      1254
+    ],
+    [
+      627,
+      680,
+      1254,
+      1254
+    ]
+  ],
+  "notes": "Jump air time is driven by gravity, not this preview duration; no mirroring."
+}

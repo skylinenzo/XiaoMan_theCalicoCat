@@ -1,0 +1,66 @@
+{
+  "frame_size": [
+    512,
+    512
+  ],
+  "ready_for_app": true,
+  "frames": [
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png",
+    "frame-05.png",
+    "frame-06.png",
+    "frame-07.png",
+    "frame-08.png"
+  ],
+  "playback_order_zero_based": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "duration_ms": [
+    180,
+    240,
+    100,
+    100,
+    100,
+    160,
+    180,
+    200
+  ],
+  "contact_baselines_y": [
+    490.0,
+    490.0,
+    490.0,
+    490.0,
+    181.3,
+    283.0,
+    380.2,
+    490.0
+  ],
+  "loop": false,
+  "mirrored": false,
+  "poses": [
+    "crouch",
+    "launch",
+    "climb_a",
+    "climb_b",
+    "hook",
+    "pull_up",
+    "rotate",
+    "settle"
+  ],
+  "sources": [
+    "source-sheet.png"
+  ],
+  "prompts": [
+    "prompt.txt"
+  ],
+  "notes": "side view, original asymmetric coat; never mirrored."
+}

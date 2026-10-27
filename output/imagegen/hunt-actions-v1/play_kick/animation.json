@@ -1,0 +1,129 @@
+{
+  "frame_size": [
+    512,
+    512
+  ],
+  "ready_for_app": true,
+  "frames": [
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png",
+    "frame-05.png",
+    "frame-06.png",
+    "frame-07.png",
+    "frame-08.png"
+  ],
+  "playback_order_zero_based": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    4,
+    5,
+    4,
+    5,
+    6,
+    7
+  ],
+  "duration_ms": [
+    220,
+    220,
+    200,
+    160,
+    160,
+    160,
+    160,
+    160,
+    160,
+    160,
+    220,
+    280
+  ],
+  "contact_baseline_y": 490,
+  "loop": false,
+  "mirrored": false,
+  "eye_rects": [
+    [
+      [
+        342,
+        362,
+        27,
+        22
+      ]
+    ],
+    [
+      [
+        153,
+        284,
+        28,
+        21
+      ]
+    ],
+    [
+      [
+        166,
+        273,
+        26,
+        20
+      ]
+    ],
+    [
+      [
+        170,
+        257,
+        26,
+        18
+      ]
+    ],
+    [
+      [
+        170,
+        274,
+        25,
+        20
+      ]
+    ],
+    [
+      [
+        172,
+        240,
+        27,
+        20
+      ]
+    ],
+    [
+      [
+        334,
+        380,
+        25,
+        21
+      ],
+      [
+        386,
+        391,
+        14,
+        14
+      ]
+    ],
+    []
+  ],
+  "contact_x": [
+    391,
+    391,
+    391,
+    391,
+    391,
+    391,
+    391,
+    391
+  ],
+  "stride_pixels": null,
+  "source": "source-sheet.png",
+  "prompts": [
+    "prompt.txt"
+  ],
+  "scale": 0.96
+}

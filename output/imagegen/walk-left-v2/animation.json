@@ -1,0 +1,65 @@
+{
+  "frame_size": [
+    512,
+    512
+  ],
+  "foot_baseline_y": 490,
+  "frames": [
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png"
+  ],
+  "playback_order_zero_based": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "duration_ms": [
+    240,
+    240,
+    240,
+    240
+  ],
+  "transition_ms": 60,
+  "stride_pixels": 110,
+  "loop": true,
+  "mirrored": false,
+  "registration": {
+    "region": [
+      38,
+      113,
+      245,
+      320
+    ],
+    "scale": 0.7573149741824441,
+    "offsets_and_errors_before_after": [
+      [
+        0,
+        0,
+        0.0,
+        0.0
+      ],
+      [
+        1,
+        0,
+        9.316040047609045,
+        8.674298116642163
+      ],
+      [
+        0,
+        32,
+        147.68704053770216,
+        8.109827533898107
+      ],
+      [
+        1,
+        32,
+        147.64188195757194,
+        11.019276995962567
+      ]
+    ]
+  },
+  "status": "four distinct stance/recovery poses; head-registered; cyclic short transitions"
+}

@@ -1,0 +1,64 @@
+{
+  "frames": [
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png"
+  ],
+  "frame_size": [
+    512,
+    512
+  ],
+  "playback_order_zero_based": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "duration_ms": [
+    200,
+    200,
+    200,
+    200
+  ],
+  "pose_labels": [
+    "A",
+    "B",
+    "A",
+    "B"
+  ],
+  "user_diagram_steps": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "mirrored": false,
+  "registration": [
+    [
+      0,
+      0,
+      0.0,
+      0.0
+    ],
+    [
+      14,
+      0,
+      106.91885869565218,
+      13.431648550724638
+    ],
+    [
+      0,
+      42,
+      183.19576086956522,
+      11.446938405797102
+    ],
+    [
+      14,
+      42,
+      197.81840579710146,
+      16.148079710144927
+    ]
+  ],
+  "notes": "Side-view pose study only, no runtime changes, no crossfade or generated in-betweens."
+}

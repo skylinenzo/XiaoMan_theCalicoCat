@@ -1,0 +1,9 @@
+Tool: built-in image_gen
+Use case: stylized-concept. Asset: separated texture parts for a 2D skeletal cat puppet. Use attached RIGHT-FACING calico cat as identity/style reference. Six disconnected cutout components, transparent background, organized as two rows with THREE components each, generous spacing. No complete four-legged cat, no poses.
+TOP LEFT large component: HEAD + NECK + TORSO fused, facing RIGHT. No legs, no paws and no tail whatsoever. Smooth continuous belly underside, no leg stumps. Preserve this RIGHT side's distinct coat: DARK shoulder behind white chest, charcoal midflank, warm tan hindquarter with prominent white island rising from belly, mostly white neck; NOT broad tan shoulder band from opposite side. Face and ears match reference.
+TOP MIDDLE: separate front UPPER LEG only, straight vertical downward capsule, white fur, rounded ends, wider top tapering to elbow bottom, no paw.
+TOP RIGHT: front LOWER LEG with PAW, straight vertical shin down ending in round white paw toes toward RIGHT, soft rounded top cap.
+BOTTOM LEFT: hind UPPER THIGH only, vertical downward, rounded plump tan-and-charcoal top fading into white lower knee, matching right hip, no foot.
+BOTTOM MIDDLE: hind LOWER LEG WITH PAW, vertical downward, white shin ending in white paw pointing RIGHT.
+BOTTOM RIGHT: complete separate TAIL, attaching on RIGHT and extending LEFT, gentle down curve, charcoal brown with small tan patch; no body attached.
+Consistent cute hand-drawn 2D rendering, dark brown outlines, muted tan and cream white, same as reference. Part joints rounded with overlapping material, avoid heavy horizontal lines at joint cuts. All parts entirely inside canvas with padding and no overlap, no labels, grid, props, shadows, skeleton guides or background. Opaque artwork on true alpha transparency.

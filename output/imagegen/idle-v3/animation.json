@@ -1,0 +1,25 @@
+{
+  "frame_size": [
+    512,
+    512
+  ],
+  "frames": [
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png",
+    "frame-05.png",
+    "frame-06.png"
+  ],
+  "duration_ms": [
+    1400,
+    450,
+    90,
+    140,
+    90,
+    850
+  ],
+  "loop": true,
+  "foot_baseline_y": 490,
+  "status": "prototype; generated frames may vary slightly"
+}

@@ -1,0 +1,111 @@
+{
+  "frame_size": [
+    512,
+    512
+  ],
+  "foot_baseline_y": 490,
+  "frames": [
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png",
+    "frame-05.png",
+    "frame-06.png",
+    "frame-07.png",
+    "frame-08.png"
+  ],
+  "playback_order_zero_based": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "duration_ms": [
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500
+  ],
+  "direction": "left",
+  "loop": true,
+  "fps": 2,
+  "normalize_soles": false,
+  "blend_poses": false,
+  "step_pixels": [
+    2.0,
+    93.5,
+    24.0,
+    18.0,
+    8.5,
+    94.5,
+    41.5,
+    8.5
+  ],
+  "support_anchors": [
+    [
+      61.0,
+      63.0
+    ],
+    [
+      63.0,
+      156.5
+    ],
+    [
+      156.5,
+      180.5
+    ],
+    [
+      180.5,
+      198.5
+    ],
+    [
+      63.0,
+      71.5
+    ],
+    [
+      71.5,
+      166.0
+    ],
+    [
+      166.0,
+      207.5
+    ],
+    [
+      207.5,
+      216.0
+    ]
+  ],
+  "lower_offsets": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "support_paws": [
+    "near_front",
+    "near_front",
+    "near_front",
+    "near_front",
+    "far_front",
+    "far_front",
+    "far_front",
+    "far_front"
+  ],
+  "stride_pixels": 290.5,
+  "mirrored": false,
+  "artwork_source": "source-01.png through source-08.png",
+  "prompt_source": "prompt.txt",
+  "body_motion": "steady"
+}

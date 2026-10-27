@@ -1,0 +1,14 @@
+{
+  "idle_scale": 0.66,
+  "foot_baseline_y": 490,
+  "segment_duration_ms": 220,
+  "left": [
+    "left-01.png",
+    "left-02.png"
+  ],
+  "right": [
+    "right-01.png",
+    "right-02.png"
+  ],
+  "notes": "Two generated turn/sit poses per direction; reverse these for standing up."
+}

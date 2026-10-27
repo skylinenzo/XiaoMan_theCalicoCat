@@ -1,0 +1,64 @@
+{
+  "frame_size": [
+    512,
+    512
+  ],
+  "foot_baseline_y": 490,
+  "ready_for_app": true,
+  "frames": [
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png"
+  ],
+  "playback_order_zero_based": [
+    0,
+    1,
+    2,
+    3,
+    2,
+    1,
+    0
+  ],
+  "duration_ms": [
+    1000,
+    600,
+    100,
+    140,
+    100,
+    600,
+    660
+  ],
+  "loop": true,
+  "mirrored": false,
+  "registration": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      1,
+      34.37493492140332,
+      15.645406136112456
+    ],
+    [
+      0,
+      27,
+      137.66821332992336,
+      25.660961062448052
+    ],
+    [
+      1,
+      26,
+      135.6214298110209,
+      31.364641085830677
+    ]
+  ],
+  "scale": 0.7084019769357496,
+  "source": "source-sheet.png",
+  "prompt": "prompt.txt",
+  "notes": "Same start/end image, shared palette, head registration; no opacity dissolve."
+}

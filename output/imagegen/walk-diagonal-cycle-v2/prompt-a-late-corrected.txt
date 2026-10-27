@@ -1,0 +1,7 @@
+Edit this exact cat sprite by making a VERY SMALL leg movement before landing. One full cat, same framing, transparent background. Keep head, face, torso, fur pattern and upright tail identical.
+The input already has the correct front/back order of ALL FOUR legs: preserve that order.
+The NEAR WHITE HIND leg is the bent leg extending FORWARD from the rear hip toward the belly center, whose paw is at x210 y475 in the input. Raise ONLY this forward-reaching hind paw about 18 pixels and move it 18 pixels toward the LEFT. It must remain the rightmost of the two hind paws, under the white belly. Keep its ankle extended forward for landing, no high tuck.
+The FAR beige FRONT leg is the diagonal leg reaching toward the RIGHT edge, paw x440 y475. Raise this paw 18 pixels and move it 18 pixels LEFT, also extended and almost landing.
+The NEAR WHITE FRONT leg is vertical under the chest: keep planted on ground, shift its paw 18 pixels RIGHT.
+The FAR beige HIND leg extends BACK to the LEFT, behind the rump, paw x60 y475. Keep planted, shift this paw 18 pixels RIGHT, keep it BEHIND the hip.
+Scale coordinates proportionally if render size differs from512. Exactly4 legs. No change to any other pixels or cat posture, no outline variation, no labels. Crucial: do not swap the hind legs. Forward hind is WHITE and lifted slightly, backward hind is shaded beige and grounded.
