@@ -3,6 +3,7 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import sys
 import tempfile
 import zipfile
 
@@ -10,7 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
-    archive = ROOT / 'release/XiaoMan_theCalicoCat-v0.1-windows-x64.zip'
+    archive = (Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else
+               ROOT / 'release/XiaoMan_theCalicoCat-v0.1.1-windows-x64.zip')
     with tempfile.TemporaryDirectory(prefix='xiaoman-release-') as temporary:
         folder = Path(temporary)
         with zipfile.ZipFile(archive) as bundle:

@@ -295,7 +295,7 @@ def main():
         (OUT / f'{name}-transparent.png').unlink(missing_ok=True)
     app = QApplication.instance() or QApplication([])
     pet = DesktopCat(settings=MemorySettings())
-    pet.resize(PET, PET)
+    pet.change_size(PET)
     for timer in (pet.timer, pet.floor_timer, pet.top_timer):
         timer.stop()
     pet.tray.hide()

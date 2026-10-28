@@ -15,6 +15,8 @@ def smoke_check(report):
     cat = DesktopCat(SimpleNamespace(value=lambda key, default=None: default,
                                      setValue=lambda *args: None, sync=lambda: None))
     try:
+        if cat.gaze.enabled or cat.gaze_action.isChecked():
+            raise RuntimeError('Gaze tracking must default to off')
         for timer in (cat.timer, cat.floor_timer, cat.top_timer):
             timer.stop()
         cat.hide()
@@ -43,6 +45,7 @@ def smoke_check(report):
             'ok': True, 'frozen': bool(getattr(sys, 'frozen', False)),
             'animation_sets': len(cat.animations), 'frames': checked,
             'walk_styles': 5, 'eye_annotations': len(cat.gaze.catalog),
+            'gaze_default_enabled': cat.gaze.enabled,
         }, indent=2), encoding='utf-8')
     finally:
         cat.close()

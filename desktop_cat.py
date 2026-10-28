@@ -22,7 +22,8 @@ from activity_rhythm import ActivityRhythm
 from mouse_hunt import MouseHunt
 from run_animation import RunCycle
 from eyes import EyeControl
-from sprite_scale import calibrate_animation
+from sprite_scale import calibrate_animation, FACTORS
+from run_shape import normalize_run
 from window_motion import GravityDescent
 from window_transfer import TransferMotion, choose_transfer, canvas_on_screens, window_occlusion_rects
 
@@ -59,6 +60,7 @@ class DesktopCat(QWidget):
         self.running_requested = False
         self.run_cycle = RunCycle()
         self.gaze = EyeControl()
+        self.gaze.enabled = False
         self.cursor_position = QCursor.pos
         self.roam_cooldown = 15.
         self.overlay_elapsed = 0.
@@ -107,6 +109,11 @@ class DesktopCat(QWidget):
             if any(frame.isNull() for frame in frames):
                 raise RuntimeError(f'找不到动画素材：{folder}')
             self.animations[state] = calibrate_animation(state, frames, metadata)
+            self.animations[state] = normalize_run(state, *self.animations[state], FACTORS.get(state, 1.))
+            # Authored eye annotations use the same affine calibration as art.
+            # Override the cached catalog for these poses to avoid stale offsets.
+            for i, eyes in enumerate(self.animations[state][1].get('eye_rects', [])):
+                self.gaze.catalog[f'{state}/{i}'] = eyes
         self.walk_animations = {}
         for style, version in [('frames_original', 'v1'), ('frames_aligned', 'v2')]:
             self.walk_animations[style] = {}
@@ -143,7 +150,10 @@ class DesktopCat(QWidget):
             **{state: sum(metadata['duration_ms']) / 1000
                for state, (_, metadata) in self.animations.items()},
             'walk_left': 1., 'walk_right': 1.}, rest_states=REST_STATES, rhythm=self.rhythm)
-        self.resize(220, 220)
+        # Keep the user-selected size in Qt logical pixels. Native DPI changes
+        # must not become the next animation/route size and compound on return.
+        self.logical_size = 220
+        self.setFixedSize(self.logical_size, self.logical_size)
         self.drag_offset = None
         self.mode = 'auto'
         self.started = time.monotonic()
@@ -162,7 +172,7 @@ class DesktopCat(QWidget):
         self.hunt_action.toggled.connect(self.set_hunt_enabled)
         self.gaze_action = self.menu.addAction('目光跟随（眼眶内）')
         self.gaze_action.setCheckable(True)
-        self.gaze_action.setChecked(True)
+        self.gaze_action.setChecked(False)
         self.gaze_action.toggled.connect(lambda enabled: setattr(self.gaze, 'enabled', enabled))
         moods = self.menu.addMenu('活动程度')
         self.mood_status = moods.addAction('当前：休息')
@@ -476,7 +486,9 @@ class DesktopCat(QWidget):
         self.hunt.cancel()
         if self.transfer is not None:
             self.cancel_transfer(fall=True)
-        self.resize(size, size)
+        self.logical_size = int(size)
+        self.setFixedSize(self.logical_size, self.logical_size)
+        self.shadow_cache.clear()
         self.refresh_floor()
 
     def screen_surfaces(self):

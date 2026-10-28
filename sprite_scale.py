@@ -10,6 +10,10 @@ FACTORS = {'idle':1., 'groom':.96, 'rest_prone':1., 'rest_supine':1., 'rest_side
            'held':.94, 'window_perch':1., 'window_straddle':1., 'jump_down':1.06,
            'window_climb':1.06, 'window_climb_back':1.16, 'window_climb_side':1.23,
            'turn':1., 'walk':1.}
+# Compare head/torso proportions at the same logical canvas, not silhouette
+# height: a crouch or a stretched gallop must remain a different shape.
+FACTORS.update(run_left=.90, run_right=1.08, pounce_left=.92,
+               pounce_right=1., play_kick=.94, play_lick=.94)
 
 def calibrate(image, factor, baseline=490.):
     if factor == 1.:return image
@@ -30,4 +34,10 @@ def calibrate_animation(state, frames, metadata):
         meta['contact_baselines_y']=[baseline+(a-baseline)*factor for a in meta['contact_baselines_y']]
     if meta.get('pivot_px'):
         x,y=meta['pivot_px'];meta['pivot_px']=[256+(x-256)*factor,baseline+(y-baseline)*factor]
+    if meta.get('eye_rects'):
+        meta['eye_rects'] = [[[256+(x-256)*factor, baseline+(y-baseline)*factor,
+                               w*factor, h*factor] for x,y,w,h in eyes]
+                             for eyes in meta['eye_rects']]
+    if meta.get('contact_x'):
+        meta['contact_x'] = [256+(x-256)*factor for x in meta['contact_x']]
     return [calibrate(f,factor,baseline) for f in frames],meta

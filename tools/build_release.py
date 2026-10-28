@@ -1,6 +1,7 @@
 """Build the portable Windows x64 v0.1 release with Windows Python."""
 import hashlib
 import importlib.metadata
+import argparse
 from pathlib import Path
 import platform
 import shutil
@@ -10,10 +11,17 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 NAME = 'XiaoMan_theCalicoCat'
-VERSION = 'v0.1'
+VERSION = 'v0.1.1'
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--version', default=VERSION)
+    parser.add_argument('--package-only', action='store_true')
+    args = parser.parse_args()
+    version = args.version
+    if not version or any(c not in 'v0123456789.-' for c in version):
+        parser.error('Use a numeric version such as v0.1.1')
     if sys.platform != 'win32' or platform.machine().upper() not in ('AMD64', 'X86_64'):
         raise SystemExit('Build using 64-bit Windows Python.')
     command = [
@@ -26,7 +34,7 @@ def main():
         '--add-data', str(ROOT / 'assets') + ':assets',
         str(ROOT / 'tools/frozen_entry.py'),
     ]
-    if '--package-only' not in sys.argv:
+    if not args.package_only:
         subprocess.run(command, cwd=ROOT, check=True)
     bundle = ROOT / 'dist' / NAME
     licenses = bundle / 'licenses'
@@ -44,11 +52,12 @@ def main():
                 target.parent.mkdir(exist_ok=True)
                 shutil.copy2(source, target)
     (bundle / 'BUILD-INFO.txt').write_text(
-        f'{NAME} {VERSION}\nPython {platform.python_version()}\n' +
+        f'{NAME} {version}\nPython {platform.python_version()}\n' +
         '\n'.join(f'{key} {value}' for key, value in versions.items()) + '\n', encoding='utf-8')
     shutil.copy2(ROOT / '使用说明.txt', bundle / '使用说明.txt')
+    shutil.copy2(ROOT / '自家猫咪制作教程.txt', bundle / '自家猫咪制作教程.txt')
     (bundle / '开始使用.txt').write_text(
-        '小满 · 三花桌宠 v0.1\n\n'
+        f'小满 · 三花桌宠 {version}\n\n'
         '适用 Windows 11 x64。完整解压 ZIP 后，双击 XiaoMan_theCalicoCat.exe。\n'
         '无需安装 Python，无需联网。请保留同目录下的 _internal 文件夹。\n'
         '左键拖动抱起猫咪；右键猫咪或托盘图标调整行为或退出。\n'
@@ -57,14 +66,14 @@ def main():
         '项目：https://github.com/skylinenzo/XiaoMan_theCalicoCat\n', encoding='utf-8-sig')
     release = ROOT / 'release'
     release.mkdir(exist_ok=True)
-    archive = release / f'{NAME}-{VERSION}-windows-x64.zip'
+    archive = release / f'{NAME}-{version}-windows-x64.zip'
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as output:
         for file in sorted(bundle.rglob('*')):
             if file.is_file():
                 output.write(file, file.relative_to(bundle.parent))
     with archive.open('rb') as source:
         digest = hashlib.file_digest(source, 'sha256').hexdigest()
-    (release / 'SHA256SUMS.txt').write_text(f'{digest}  {archive.name}\n', encoding='ascii')
+    (release / f'SHA256SUMS-{version}.txt').write_text(f'{digest}  {archive.name}\n', encoding='ascii')
     print(f'Built {archive} ({archive.stat().st_size / 1024**2:.1f} MiB)')
 
 

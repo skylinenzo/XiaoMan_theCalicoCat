@@ -10,7 +10,7 @@ OUT=common.ROOT/'output/hunt-actions-preview'
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
     app=common.QApplication.instance() or common.QApplication([])
-    cat=common.DesktopCat(common.MemorySettings())
+    cat=common.DesktopCat(common.MemorySettings());cat.gaze.enabled=True
     for timer in (cat.timer,cat.floor_timer,cat.top_timer):timer.stop()
     cat.tray.hide();cat.behavior.enabled=False
     cat.logical_screens=lambda:{'preview':(0,0,1000,650)}

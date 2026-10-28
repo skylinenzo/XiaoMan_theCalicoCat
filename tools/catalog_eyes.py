@@ -19,6 +19,8 @@ def main():
         elif len(eyes)>2:
             eyes=sorted(eyes,key=lambda e:e[2]*e[3],reverse=True)[:2]
         overrides = {
+            'rest_side/1': [[349,385,19,18],[400,407,18,13]],
+            'rest_side/0': [[349,385,19,18],[400,407,18,13]],
             'idle/0': [[207,269,35,23],[280,269,33,23]],
             'idle/2': [], 'idle/3': [], 'idle/4': [], 'groom/3': [],
             'window_climb_side/6': [[400,218,20,21]],

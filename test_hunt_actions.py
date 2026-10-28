@@ -67,7 +67,7 @@ class HuntActionAppTests(unittest.TestCase):
         self.assertEqual(cat.behavior.state,'idle')
 
     def test_eye_component_changes_only_iris_regions_and_respects_blinks(self):
-        cat=self.make_cat();image=cat.frames[0];cat.gaze.target=(cat.x()+700,cat.y()-200)
+        cat=self.make_cat();cat.gaze.enabled=True;image=cat.frames[0];cat.gaze.target=(cat.x()+700,cat.y()-200)
         painted=cat.gaze_image(image,'idle/0');self.assertNotEqual(image,painted)
         rects=cat.gaze.catalog['idle/0']
         changed=0
